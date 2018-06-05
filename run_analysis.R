@@ -62,6 +62,8 @@ har3$activity = factor(har3$activity,
 #summary(har3) #double checking I was successful
 
 # #5 in the assignment
+# takes the data frame that you want to perform the averaging on, and then you specify the vars you want to group by
+# and then specify the function, so here we have mean.
 fin_data = aggregate(har3[, 2:67], by=list(subjects = har3$subjects,activity = har3$activity), mean)
 
 write.table(fin_data, "final_data_1a.txt", row.name = FALSE)

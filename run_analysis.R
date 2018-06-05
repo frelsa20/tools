@@ -64,4 +64,4 @@ har3$activity = factor(har3$activity,
 # #5 in the assignment
 fin_data = aggregate(har3[, 2:67], by=list(subjects = har3$subjects,activity = har3$activity), mean)
 
-write.table(fin_data, "final_data_1a.txt", row.names = FALSE)
+write.table(fin_data, "final_data_1a.txt", row.name = FALSE)
